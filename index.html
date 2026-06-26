@@ -339,9 +339,10 @@
         <h1 class="hero-names">Антон<br>и Мария</h1>
         <p class="hero-subtitle">история одной любви</p>
 
+        <!-- Два фото на главном блоке: пальмы.jpg и шри.jpg -->
         <div class="photo-row">
-            <div class="photo-child" style="background-image: url('мальчик.png');"></div>
-            <div class="photo-child" style="background-image: url('девочка.png');"></div>
+            <div class="photo-child" style="background-image: url('пальмы.jpg');"></div>
+            <div class="photo-child" style="background-image: url('шри.jpg');"></div>
         </div>
 
         <p class="hero-quote">«Однажды и навсегда...»</p>
@@ -741,7 +742,7 @@
             });
         }
 
-        // Отправка формы
+        // Отправка формы через Formspree (без перехода на сайт)
         var rsvpForm = document.getElementById('rsvpForm');
         if (rsvpForm) {
             rsvpForm.addEventListener('submit', function(e) {
