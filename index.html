@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -42,14 +41,28 @@
             transform: translateY(0);
         }
 
-        section { max-width: 430px; width: 100%; padding: 60px 26px; text-align: center; }
+        section { 
+            max-width: 430px; 
+            width: 100%; 
+            padding: 60px 26px; 
+            text-align: center; 
+            margin-bottom: 20px; /* Разделяем блоки */
+            border-radius: 8px; /* Добавляем скругление для красоты */
+        }
 
-        /* Цветные блоки — БЕЗ БЕЛЫХ ПРОМЕЖУТКОВ */
+        /* Цветные блоки — теперь с отступами друг от друга */
         .section-yellow { background: #FFF1A0; color: #2d2d2d; }
         .section-orange { background: #FFC966; color: #2d2d2d; }
         .section-green { background: #7BC67E; color: #2d2d2d; }
         .section-pink { background: #FFB3D9; color: #2d2d2d; }
         .section-lilac { background: #D9B3D9; color: #2d2d2d; }
+
+        /* Фон для блока дресс-кода — белый */
+        .section-dresscode { 
+            background: #ffffff; 
+            color: #2d2d2d; 
+            border: 1px solid #eee;
+        }
 
         .serif-title {
             font-family: 'Cormorant Garamond', serif;
@@ -264,13 +277,13 @@
         .tabs-content.active { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .dress-photo { width: 100%; aspect-ratio: 3/4; background-size: cover; background-position: center; background-color: #f5f3f0; border-radius: 4px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); }
 
-        /* ДЛЯ НЕГО — ОДНО ФОТО DSC_8774.jpg СТРОГО ПО ЦЕНТРУ */
+        /* ДЛЯ НЕГО — ОДНО ФОТО photo_2026-06-26_15-35-43.jpg СТРОГО ПО ЦЕНТРУ */
         .dress-photo-center {
             width: 100%;
             max-width: 280px;
             margin: 0 auto;
             aspect-ratio: 3/4;
-            background-image: url('DSC_8774.jpg');
+            background-image: url('photo_2026-06-26_15-35-43.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 4px;
@@ -332,7 +345,7 @@
 
         /* Адаптив */
         @media (max-width: 420px) {
-            section { padding: 48px 20px; }
+            section { padding: 48px 20px; margin-bottom: 16px; }
             .hero-names { font-size: 38px; letter-spacing: 4px; }
             .hero-date { font-size: 30px; letter-spacing: 5px; }
             .hero-subtitle { font-size: 18px; margin-bottom: 24px; }
@@ -369,7 +382,7 @@
             .dress-photo-center { max-width: 220px; }
         }
         @media (max-width: 360px) {
-            section { padding: 40px 16px; }
+            section { padding: 40px 16px; margin-bottom: 12px; }
             .hero-names { font-size: 32px; letter-spacing: 3px; }
             .hero-date { font-size: 26px; letter-spacing: 4px; }
             .hero-subtitle { font-size: 16px; }
@@ -561,8 +574,8 @@
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 7: ДРЕСС-КОД (ЛИЛОВЫЙ) ===== -->
-    <section class="reveal section-lilac">
+    <!-- ===== СЕКЦИЯ 7: ДРЕСС-КОД (БЕЛЫЙ ФОН) ===== -->
+    <section class="reveal section-dresscode">
         <h2 class="serif-title">Дресс-код</h2>
         <p class="serif-subtitle">dress-code</p>
 
@@ -593,7 +606,7 @@
             </div>
         </div>
 
-        <!-- ДЛЯ НЕГО — ФОТО DSC_8774.jpg СТРОГО ПО ЦЕНТРУ -->
+        <!-- ДЛЯ НЕГО — ФОТО photo_2026-06-26_15-35-43.jpg СТРОГО ПО ЦЕНТРУ -->
         <div id="for-him" class="tabs-content">
             <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
                 <div class="dress-photo-center"></div>
