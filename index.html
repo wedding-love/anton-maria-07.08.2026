@@ -46,8 +46,21 @@
             width: 100%; 
             padding: 60px 26px; 
             text-align: center; 
-            margin-bottom: 0; /* Убираем отступы между блоками */
-            border-radius: 0; /* Убираем скругление */
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* ПЕРВЫЙ БЛОК — ВО ВСЮ ВЫСОТУ ЭКРАНА */
+        .section-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 26px;
+            background: #FFF1A0;
+        }
+        .section-hero .reveal-content {
+            width: 100%;
         }
 
         .section-yellow { background: #FFF1A0; color: #2d2d2d; }
@@ -59,7 +72,7 @@
         .section-dresscode { 
             background: #ffffff; 
             color: #2d2d2d; 
-            border: none; /* Убираем рамку */
+            border: none;
         }
 
         .serif-title {
@@ -152,8 +165,10 @@
             letter-spacing: 8px;
             margin: 26px 0 32px;
         }
+
+        /* КНОПКА МУЗЫКИ — ОРАНЖЕВАЯ */
         .play-btn {
-            background: #2d4c3e;
+            background: #FFC966;
             border: none;
             padding: 16px 32px;
             cursor: pointer;
@@ -161,13 +176,13 @@
             font-weight: 400;
             letter-spacing: 4px;
             font-size: 14px;
-            color: #ffffff;
+            color: #2d2d2d;
             transition: all 0.3s ease;
             text-transform: uppercase;
             border-radius: 2px;
         }
-        .play-btn:hover { background: #1e3529; opacity: 0.9; }
-        .play-btn.playing { background: #7BC67E; }
+        .play-btn:hover { background: #f0b850; opacity: 0.9; }
+        .play-btn.playing { background: #7BC67E; color: #ffffff; }
 
         .invitation-text {
             font-family: 'Cormorant Garamond', serif;
@@ -222,6 +237,7 @@
             margin: 0 auto; 
         }
 
+        /* ПЛАН ДНЯ — УВЕЛИЧЕННЫЙ ШРИФТ */
         .timeline { position: relative; padding: 22px 0; max-width: 340px; margin: 0 auto; }
         .timeline::before { content: ''; position: absolute; left: 50%; width: 1px; height: 100%; background: rgba(255,255,255,0.25); transform: translateX(-50%); }
         .timeline-item { position: relative; margin-bottom: 38px; width: 100%; display: flex; justify-content: space-between; align-items: flex-start; }
@@ -235,9 +251,31 @@
         }
         .timeline-item:nth-child(odd) { flex-direction: row-reverse; text-align: left; }
         .timeline-item:nth-child(even) { text-align: right; }
-        .t-time { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 24px; color: #FFF1A0; display: block; letter-spacing: 3px; margin-bottom: 4px; }
-        .t-event { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 19px; line-height: 1.3; color: #ffffff; }
-        .t-desc { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 5px; line-height: 1.5; }
+        .t-time { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-weight: 400; 
+            font-size: 28px; 
+            color: #FFF1A0; 
+            display: block; 
+            letter-spacing: 3px; 
+            margin-bottom: 4px; 
+        }
+        .t-event { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-style: italic; 
+            font-weight: 400; 
+            font-size: 22px; 
+            line-height: 1.3; 
+            color: #ffffff; 
+        }
+        .t-desc { 
+            font-family: 'Inter', sans-serif; 
+            font-weight: 300; 
+            font-size: 14px; 
+            color: rgba(255,255,255,0.8); 
+            margin-top: 5px; 
+            line-height: 1.5; 
+        }
 
         .timer-wrapper { display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 24px; }
         .timer-container { display: flex; justify-content: center; align-items: baseline; gap: 2.5vw; flex-wrap: nowrap; width: 100%; }
@@ -300,11 +338,25 @@
         }
         .location-name { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 26px; color: #2d2d2d; letter-spacing: 3px; margin-bottom: 6px; }
         .location-address { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; color: #4a4a4a; line-height: 1.7; margin-bottom: 26px; }
-        .map-btn { display: inline-block; text-decoration: none; background: #2d4c3e; color: #ffffff; padding: 16px 34px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; transition: all 0.3s ease; border-radius: 2px; border: none; cursor: pointer; }
-        .map-btn:hover { background: #1e3529; }
-        .map-btn i { margin-right: 10px; }
-        .map-btn-yellow { background: #FFF1A0; color: #2d2d2d; }
-        .map-btn-yellow:hover { background: #f5e080; }
+        
+        /* КНОПКА КАРТЫ — ОРАНЖЕВАЯ */
+        .map-btn { 
+            display: inline-block; 
+            text-decoration: none; 
+            background: #FFC966; 
+            color: #2d2d2d; 
+            padding: 16px 34px; 
+            font-family: 'Inter', sans-serif; 
+            font-weight: 400; 
+            font-size: 14px; 
+            letter-spacing: 4px; 
+            text-transform: uppercase; 
+            transition: all 0.3s ease; 
+            border-radius: 2px; 
+            border: none; 
+            cursor: pointer; 
+        }
+        .map-btn:hover { background: #f0b850; }
 
         .form-container { background: rgba(255,255,255,0.6); padding: 32px 24px; border: none; text-align: left; border-radius: 4px; }
         .form-label { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 20px; color: #2d2d2d; display: block; margin-bottom: 8px; letter-spacing: 1px; }
@@ -335,6 +387,7 @@
 
         @media (max-width: 420px) {
             section { padding: 48px 20px; }
+            .section-hero { padding: 30px 20px; }
             .hero-names { font-size: 38px; letter-spacing: 4px; }
             .hero-date { font-size: 30px; letter-spacing: 5px; }
             .hero-subtitle { font-size: 18px; margin-bottom: 24px; }
@@ -345,9 +398,9 @@
             .serif-title-white { font-size: 25px; letter-spacing: 3px; }
             .serif-subtitle, .serif-subtitle-white { font-size: 17px; margin-bottom: 25px; }
             .warm-text, .warm-text-white { font-size: 18px; }
-            .t-time { font-size: 20px; }
-            .t-event { font-size: 16px; }
-            .t-desc { font-size: 11px; }
+            .t-time { font-size: 24px; }
+            .t-event { font-size: 19px; }
+            .t-desc { font-size: 13px; }
             .timeline-item { margin-bottom: 30px; }
             .form-container { padding: 24px 16px; }
             .form-label { font-size: 18px; }
@@ -372,6 +425,7 @@
         }
         @media (max-width: 360px) {
             section { padding: 40px 16px; }
+            .section-hero { padding: 20px 16px; }
             .hero-names { font-size: 32px; letter-spacing: 3px; }
             .hero-date { font-size: 26px; letter-spacing: 4px; }
             .hero-subtitle { font-size: 16px; }
@@ -385,9 +439,9 @@
             .calendar-day-header { font-size: 9px; }
             .calendar-day.wedding { width: 28px; height: 28px; font-size: 14px; }
             .warm-text, .warm-text-white { font-size: 16px; }
-            .t-time { font-size: 18px; }
-            .t-event { font-size: 14px; }
-            .t-desc { font-size: 10px; }
+            .t-time { font-size: 20px; }
+            .t-event { font-size: 16px; }
+            .t-desc { font-size: 11px; }
             .timeline-item { margin-bottom: 26px; }
             .color-circle { width: 38px; height: 38px; }
             .color-palette { gap: 10px; }
@@ -412,8 +466,8 @@
 </head>
 <body>
 
-    <!-- ===== СЕКЦИЯ 1: ОБЛОЖКА ===== -->
-    <section class="section-yellow" style="padding-top: 80px;">
+    <!-- ===== СЕКЦИЯ 1: ОБЛОЖКА (ВО ВСЮ ВЫСОТУ ЭКРАНА) ===== -->
+    <section class="section-hero">
         <div class="reveal-content">
             <h1 class="hero-names">Антон<br>и Мария</h1>
             <p class="hero-subtitle">Мы женимся!</p>
@@ -487,7 +541,7 @@
             <p class="warm-text" style="font-size: 18px; color: #4a4a4a; margin-bottom: 24px; max-width: 320px; margin-left: auto; margin-right: auto;">
                 Уютное место среди природы, где каждый уголок дышит теплом и романтикой. Здесь мы скажем друг другу самые важные слова.
             </p>
-            <a href="https://yandex.ru/maps/org/zolotoy_sazan/155312911468?si=vh7u40c3azzjt7m7j47a3r8ud0" target="_blank" class="map-btn map-btn-yellow">
+            <a href="https://yandex.ru/maps/org/zolotoy_sazan/155312911468?si=vh7u40c3azzjt7m7j47a3r8ud0" target="_blank" class="map-btn">
                 <i class="fas fa-map-marker-alt"></i> Открыть карту
             </a>
         </div>
