@@ -16,7 +16,7 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
         body {
-            background-color: #ffffff;
+            background-color: #f8f6f2;
             margin: 0;
             padding: 0;
             display: flex;
@@ -30,19 +30,32 @@
             width: 100%;
         }
 
-        .reveal { opacity: 0; transform: translateY(35px); transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .reveal-delay-1 { transition-delay: 0.15s; }
-        .reveal-delay-2 { transition-delay: 0.3s; }
+        /* АНИМАЦИЯ ПОЯВЛЕНИЯ СНИЗУ ВВЕРХ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         section { max-width: 430px; width: 100%; padding: 60px 26px; text-align: center; }
-        .section-primary { background-color: #2d4c3e; color: #ffffff; }
+
+        /* Цветные блоки */
+        .section-yellow { background: #FFF1A0; color: #2d2d2d; }
+        .section-orange { background: #FFC966; color: #2d2d2d; }
+        .section-green { background: #7BC67E; color: #2d2d2d; }
+        .section-pink { background: #FFB3D9; color: #2d2d2d; }
+        .section-lilac { background: #D9B3D9; color: #2d2d2d; }
+        .section-white { background: #ffffff; color: #2d2d2d; }
 
         .serif-title {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 400;
             letter-spacing: 4px;
-            color: #2d4c3e;
+            color: #2d2d2d;
             font-size: 32px;
             margin-bottom: 10px;
             text-transform: uppercase;
@@ -59,7 +72,16 @@
             font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-style: italic;
-            color: #6b6b6b;
+            color: #4a4a4a;
+            letter-spacing: 2px;
+            font-size: 19px;
+            margin-bottom: 32px;
+        }
+        .serif-subtitle-white {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            color: rgba(255,255,255,0.8);
             letter-spacing: 2px;
             font-size: 19px;
             margin-bottom: 32px;
@@ -70,21 +92,21 @@
             font-style: italic;
             line-height: 1.8;
             font-size: 20px;
-            color: #555;
+            color: #4a4a4a;
         }
-        .quote-text {
+        .warm-text-white {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-style: italic;
-            font-size: 24px;
-            color: #2d4c3e;
-            line-height: 1.6;
+            line-height: 1.8;
+            font-size: 20px;
+            color: rgba(255,255,255,0.85);
         }
 
         /* Hero */
         .hero-names {
             font-family: 'Cormorant Garamond', serif;
-            color: #2d4c3e;
+            color: #2d2d2d;
             font-size: 52px;
             text-transform: uppercase;
             letter-spacing: 6px;
@@ -97,48 +119,57 @@
             font-style: italic;
             font-weight: 300;
             font-size: 22px;
-            color: #6b6b6b;
+            color: #4a4a4a;
             margin-bottom: 32px;
             letter-spacing: 3px;
         }
         .photo-row { display: flex; gap: 16px; margin: 25px 0; }
-        .photo-child { aspect-ratio: 3/4; background-size: cover; background-position: center; width: 100%; background-color: #f5f3f0; border-radius: 2px; box-shadow: 0 8px 25px rgba(0,0,0,0.06); transition: transform 0.5s ease; }
-        .photo-child:hover { transform: scale(1.02); }
+        .photo-child { aspect-ratio: 3/4; background-size: cover; background-position: center; width: 100%; background-color: #f5f3f0; border-radius: 4px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
         .hero-quote {
             font-family: 'Cormorant Garamond', serif;
             font-style: italic;
             font-weight: 300;
             font-size: 26px;
-            color: #2d4c3e;
+            color: #2d2d2d;
             margin: 20px 0 8px;
             line-height: 1.5;
         }
         .hero-date {
             font-family: 'Cormorant Garamond', serif;
             font-size: 38px;
-            color: #2d4c3e;
+            color: #2d2d2d;
             font-weight: 300;
             letter-spacing: 8px;
             margin: 26px 0 32px;
         }
         .play-btn {
-            background: none;
-            border: 2px solid #2d4c3e;
+            background: #2d4c3e;
+            border: none;
             padding: 16px 32px;
             cursor: pointer;
             font-family: 'Inter', sans-serif;
             font-weight: 400;
             letter-spacing: 4px;
             font-size: 14px;
-            color: #2d4c3e;
+            color: #ffffff;
             transition: all 0.3s ease;
             text-transform: uppercase;
+            border-radius: 2px;
         }
-        .play-btn:hover { background: #2d4c3e; color: #fff; }
-        .play-btn.playing { background: #2d4c3e; color: #fff; }
+        .play-btn:hover { background: #1e3529; opacity: 0.9; }
+        .play-btn.playing { background: #7BC67E; }
 
         /* Приглашение */
         .invitation-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 2;
+            color: #2d2d2d;
+            max-width: 360px;
+            margin: 0 auto;
+        }
+        .invitation-text-white {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: 22px;
@@ -156,7 +187,7 @@
             letter-spacing: 2px;
         }
 
-        /* Календарь */
+        /* Календарь — ДАТА ВЫДЕЛЕНА ЖЁЛТЫМ */
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -168,29 +199,47 @@
             margin: 0 auto 35px;
         }
         .calendar-day-header { opacity: 0.5; font-size: 12px; letter-spacing: 2px; padding-bottom: 8px; }
-        .calendar-day { padding: 6px 2px; }
-        .calendar-day.wedding { position: relative; z-index: 1; font-weight: 500; color: #2d4c3e; font-size: 18px; }
-        .calendar-day.wedding span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30px; height: 30px; background: #fff; border-radius: 50%; z-index: -1; border: 1px solid rgba(45,76,62,0.2); }
+        .calendar-day { padding: 6px 2px; border-radius: 4px; }
+        .calendar-day.wedding { 
+            background: #FFF1A0; 
+            color: #2d2d2d; 
+            font-weight: 600; 
+            font-size: 18px; 
+            border-radius: 50%; 
+            width: 36px; 
+            height: 36px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin: 0 auto; 
+        }
 
-        /* Тайминг */
+        /* Тайминг — УБРАНА ОБВОДКА */
         .timeline { position: relative; padding: 22px 0; max-width: 340px; margin: 0 auto; }
-        .timeline::before { content: ''; position: absolute; left: 50%; width: 1px; height: 100%; background: rgba(45,76,62,0.25); transform: translateX(-50%); }
+        .timeline::before { content: ''; position: absolute; left: 50%; width: 1px; height: 100%; background: rgba(255,255,255,0.25); transform: translateX(-50%); }
         .timeline-item { position: relative; margin-bottom: 38px; width: 100%; display: flex; justify-content: space-between; align-items: flex-start; }
-        .timeline-content { width: 44%; padding: 0; }
+        .timeline-content { 
+            width: 44%; 
+            padding: 0; 
+            background: none !important; 
+            border: none !important; 
+            box-shadow: none !important; 
+            outline: none !important;
+        }
         .timeline-item:nth-child(odd) { flex-direction: row-reverse; text-align: left; }
         .timeline-item:nth-child(even) { text-align: right; }
-        .t-time { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 24px; color: #2d4c3e; display: block; letter-spacing: 3px; margin-bottom: 4px; }
-        .t-event { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 19px; line-height: 1.3; }
-        .t-desc { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 13px; color: #888; margin-top: 5px; line-height: 1.5; }
+        .t-time { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 24px; color: #FFF1A0; display: block; letter-spacing: 3px; margin-bottom: 4px; }
+        .t-event { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 19px; line-height: 1.3; color: #ffffff; }
+        .t-desc { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 5px; line-height: 1.5; }
 
         /* Таймер */
         .timer-wrapper { display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 24px; }
         .timer-container { display: flex; justify-content: center; align-items: baseline; gap: 2.5vw; flex-wrap: nowrap; width: 100%; }
-        .timer-item { background: none; padding: 8px 4px; min-width: 0; border: none; text-align: center; flex-shrink: 1; }
-        .timer-val { display: block; font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 10vw, 52px); font-weight: 300; letter-spacing: 2px; line-height: 1; color: #ffffff; white-space: nowrap; }
-        .timer-label { font-family: 'Inter', sans-serif; font-weight: 300; font-size: clamp(10px, 2.5vw, 13px); text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; display: block; margin-top: 6px; white-space: nowrap; }
-        .timer-separator { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 8vw, 40px); font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1; padding-bottom: clamp(14px, 3vw, 22px); flex-shrink: 0; }
-        @media (max-width: 360px) { .timer-container { gap: 1.5vw; } .timer-item { padding: 4px 2px; } }
+        .timer-item { background: rgba(255,255,255,0.2); padding: 8px 12px; min-width: 0; border: none; text-align: center; flex-shrink: 1; border-radius: 4px; }
+        .timer-val { display: block; font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 10vw, 52px); font-weight: 300; letter-spacing: 2px; line-height: 1; color: #2d2d2d; white-space: nowrap; }
+        .timer-label { font-family: 'Inter', sans-serif; font-weight: 300; font-size: clamp(10px, 2.5vw, 13px); text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; display: block; margin-top: 6px; white-space: nowrap; color: #2d2d2d; }
+        .timer-separator { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 8vw, 40px); font-weight: 300; color: #2d2d2d; line-height: 1; padding-bottom: clamp(14px, 3vw, 22px); flex-shrink: 0; opacity: 0.5; }
+        @media (max-width: 360px) { .timer-container { gap: 1.5vw; } .timer-item { padding: 4px 8px; } }
 
         /* Дресс-код */
         .dresscode-intro {
@@ -198,7 +247,7 @@
             font-weight: 300;
             font-style: italic;
             font-size: 20px;
-            color: #555;
+            color: #4a4a4a;
             margin-bottom: 20px;
             line-height: 1.7;
             max-width: 350px;
@@ -209,12 +258,24 @@
         .color-circle { width: 45px; height: 45px; border-radius: 50%; display: inline-block; border: 2px solid rgba(0,0,0,0.06); box-shadow: 0 3px 10px rgba(0,0,0,0.04); transition: transform 0.3s ease; }
         .color-circle:hover { transform: scale(1.1); }
         .tabs-nav { display: flex; justify-content: center; gap: 12px; margin-bottom: 30px; }
-        .tab-btn { background: none; border: 1px solid #2d4c3e; color: #2d4c3e; padding: 12px 28px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; letter-spacing: 2px; cursor: pointer; transition: all 0.3s ease; }
-        .tab-btn.active { background-color: #2d4c3e; color: #ffffff; }
-        .tabs-content { display: none; animation: fadeIn 0.5s ease; }
+        .tab-btn { background: rgba(255,255,255,0.5); border: 1px solid #2d2d2d; color: #2d2d2d; padding: 12px 28px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; letter-spacing: 2px; cursor: pointer; transition: all 0.3s ease; border-radius: 2px; }
+        .tab-btn.active { background: #2d4c3e; color: #ffffff; border-color: #2d4c3e; }
+        .tabs-content { display: none; }
         .tabs-content.active { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-        .dress-photo { width: 100%; aspect-ratio: 3/4; background-size: cover; background-position: center; background-color: #f5f3f0; border-radius: 2px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .dress-photo { width: 100%; aspect-ratio: 3/4; background-size: cover; background-position: center; background-color: #f5f3f0; border-radius: 4px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); }
+
+        /* ДЛЯ НЕГО — ОДНО ФОТО ПО ЦЕНТРУ */
+        .dress-photo-center {
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto;
+            aspect-ratio: 3/4;
+            background-image: url('3.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 4px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+        }
 
         /* Локация */
         .location-photo {
@@ -224,39 +285,50 @@
             background-size: cover;
             background-position: center;
             margin-bottom: 24px;
-            border-radius: 2px;
+            border-radius: 4px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.08);
         }
-        .location-name { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 26px; color: #2d4c3e; letter-spacing: 3px; margin-bottom: 6px; }
-        .location-address { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; color: #666; line-height: 1.7; margin-bottom: 26px; }
-        .map-btn { display: inline-block; text-decoration: none; background: #2d4c3e; color: #fff; padding: 16px 34px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; transition: all 0.3s ease; border-radius: 2px; border: none; cursor: pointer; }
+        .location-name { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 26px; color: #2d2d2d; letter-spacing: 3px; margin-bottom: 6px; }
+        .location-address { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; color: #4a4a4a; line-height: 1.7; margin-bottom: 26px; }
+        .map-btn { display: inline-block; text-decoration: none; background: #2d4c3e; color: #ffffff; padding: 16px 34px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; transition: all 0.3s ease; border-radius: 2px; border: none; cursor: pointer; }
         .map-btn:hover { background: #1e3529; }
         .map-btn i { margin-right: 10px; }
 
+        .map-btn-yellow { background: #FFF1A0; color: #2d2d2d; }
+        .map-btn-yellow:hover { background: #f5e080; }
+
         /* Анкета */
-        .form-container { background: #fafaf8; padding: 32px 24px; border: 1px solid #eee; text-align: left; border-radius: 2px; }
-        .form-label { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 20px; color: #2d4c3e; display: block; margin-bottom: 8px; letter-spacing: 1px; }
-        .form-input, .form-select, .form-textarea { width: 100%; padding: 14px 16px; margin: 0 0 24px; border: 1px solid #e0ddd6; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; background: #fff; outline: none; transition: border-color 0.3s ease; -webkit-appearance: none; -moz-appearance: none; appearance: none; color: #2d2d2d; }
+        .form-container { background: rgba(255,255,255,0.6); padding: 32px 24px; border: none; text-align: left; border-radius: 4px; }
+        .form-label { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 20px; color: #2d2d2d; display: block; margin-bottom: 8px; letter-spacing: 1px; }
+        .form-input, .form-select, .form-textarea { width: 100%; padding: 14px 16px; margin: 0 0 24px; border: 1px solid #ddd; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; background: #fff; outline: none; transition: border-color 0.3s ease; -webkit-appearance: none; -moz-appearance: none; appearance: none; color: #2d2d2d; border-radius: 2px; }
         .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: #2d4c3e; }
         .form-input::placeholder, .form-textarea::placeholder { color: #aaa; }
-        .form-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%232d4c3e' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; cursor: pointer; color: #2d2d2d; }
+        .form-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%232d2d2d' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; cursor: pointer; color: #2d2d2d; }
         .form-select option { color: #2d2d2d; background: #fff; }
         .form-textarea { resize: vertical; min-height: 90px; }
         .radio-group { margin: 0 0 24px; display: flex; flex-direction: column; gap: 12px; }
-        .radio-option { display: flex; align-items: center; gap: 12px; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; cursor: pointer; color: #555; }
+        .radio-option { display: flex; align-items: center; gap: 12px; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; cursor: pointer; color: #4a4a4a; }
         .radio-option input { accent-color: #2d4c3e; width: 18px; height: 18px; cursor: pointer; }
         .checkbox-group { margin: 0 0 24px; display: flex; flex-direction: column; gap: 10px; }
-        .checkbox-option { display: flex; align-items: center; gap: 12px; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; cursor: pointer; color: #555; }
+        .checkbox-option { display: flex; align-items: center; gap: 12px; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; cursor: pointer; color: #4a4a4a; }
         .checkbox-option input { accent-color: #2d4c3e; width: 18px; height: 18px; cursor: pointer; flex-shrink: 0; }
-        .form-submit { width: 100%; background: #2d4c3e; color: #fff; border: none; padding: 17px; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 4px; font-size: 15px; text-transform: uppercase; cursor: pointer; transition: background 0.3s ease; }
+        .form-submit { width: 100%; background: #2d4c3e; color: #ffffff; border: none; padding: 17px; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 4px; font-size: 15px; text-transform: uppercase; cursor: pointer; transition: background 0.3s ease; border-radius: 2px; }
         .form-submit:hover { background: #1e3529; }
-        .form-deadline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 18px; color: #999; margin-bottom: 30px; text-align: center; }
+
+        .form-submit-yellow { background: #FFF1A0; color: #2d2d2d; }
+        .form-submit-yellow:hover { background: #f5e080; }
+
+        .form-submit-orange { background: #FFC966; color: #2d2d2d; }
+        .form-submit-orange:hover { background: #f0b850; }
+
+        .form-deadline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 18px; color: #888; margin-bottom: 30px; text-align: center; }
 
         /* Контакты */
-        .contact-link { color: #2d4c3e; text-decoration: none; font-family: 'Inter', sans-serif; font-weight: 400; border-bottom: 1px solid #2d4c3e; margin: 0 14px; font-size: 16px; letter-spacing: 2px; transition: all 0.3s ease; }
+        .contact-link { color: #2d2d2d; text-decoration: none; font-family: 'Inter', sans-serif; font-weight: 400; border-bottom: 1px solid #2d2d2d; margin: 0 14px; font-size: 16px; letter-spacing: 2px; transition: all 0.3s ease; }
         .contact-link:hover { opacity: 0.7; }
         .contact-link i { margin-right: 8px; }
-        .farewell-text { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 28px; color: #2d4c3e; margin-top: 38px; line-height: 1.6; }
+
+        .farewell-text { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 28px; color: #2d2d2d; margin-top: 38px; line-height: 1.6; }
 
         /* Адаптив */
         @media (max-width: 420px) {
@@ -265,13 +337,12 @@
             .hero-date { font-size: 30px; letter-spacing: 5px; }
             .hero-subtitle { font-size: 18px; margin-bottom: 24px; }
             .hero-quote { font-size: 22px; }
-            .invitation-text { font-size: 19px; }
+            .invitation-text, .invitation-text-white { font-size: 19px; }
             .invitation-highlight { font-size: 22px; }
             .serif-title { font-size: 27px; letter-spacing: 3px; }
             .serif-title-white { font-size: 25px; letter-spacing: 3px; }
-            .serif-subtitle { font-size: 17px; margin-bottom: 25px; }
-            .warm-text { font-size: 18px; }
-            .quote-text { font-size: 21px; }
+            .serif-subtitle, .serif-subtitle-white { font-size: 17px; margin-bottom: 25px; }
+            .warm-text, .warm-text-white { font-size: 18px; }
             .t-time { font-size: 20px; }
             .t-event { font-size: 16px; }
             .t-desc { font-size: 11px; }
@@ -281,17 +352,21 @@
             .form-input, .form-select, .form-textarea { font-size: 15px; padding: 12px 14px; }
             .radio-option { font-size: 15px; }
             .checkbox-option { font-size: 15px; }
-            .tab-btn { padding: 10px 20px; font-size: 12px; }
-            .dress-photo { aspect-ratio: 2/3; }
             .photo-row { gap: 12px; margin: 18px 0; }
             .play-btn { padding: 14px 26px; font-size: 12px; letter-spacing: 3px; }
             .map-btn { padding: 14px 26px; font-size: 12px; }
             .calendar-grid { font-size: 14px; gap: 5px; }
             .calendar-day-header { font-size: 10px; }
+            .calendar-day.wedding { width: 32px; height: 32px; font-size: 16px; }
             .location-photo { height: 200px; }
             .contact-link { font-size: 14px; }
             .farewell-text { font-size: 24px; }
             .dresscode-intro { font-size: 18px; }
+            .tab-btn { padding: 10px 20px; font-size: 12px; }
+            .dress-photo { aspect-ratio: 2/3; }
+            .tabs-nav { gap: 8px; }
+            .tabs-content.active { gap: 12px; }
+            .dress-photo-center { max-width: 220px; }
         }
         @media (max-width: 360px) {
             section { padding: 40px 16px; }
@@ -300,23 +375,20 @@
             .hero-subtitle { font-size: 16px; }
             .hero-quote { font-size: 20px; }
             .photo-row { gap: 10px; margin: 15px 0; }
-            .invitation-text { font-size: 17px; line-height: 1.8; }
+            .invitation-text, .invitation-text-white { font-size: 17px; line-height: 1.8; }
             .invitation-highlight { font-size: 20px; }
             .serif-title { font-size: 24px; }
             .serif-title-white { font-size: 22px; }
             .calendar-grid { gap: 4px; font-size: 12px; }
             .calendar-day-header { font-size: 9px; }
-            .warm-text { font-size: 16px; }
-            .quote-text { font-size: 19px; }
+            .calendar-day.wedding { width: 28px; height: 28px; font-size: 14px; }
+            .warm-text, .warm-text-white { font-size: 16px; }
             .t-time { font-size: 18px; }
             .t-event { font-size: 14px; }
             .t-desc { font-size: 10px; }
             .timeline-item { margin-bottom: 26px; }
             .color-circle { width: 38px; height: 38px; }
             .color-palette { gap: 10px; }
-            .tab-btn { padding: 9px 16px; font-size: 11px; }
-            .tabs-nav { gap: 8px; margin-bottom: 24px; }
-            .tabs-content.active { gap: 12px; }
             .location-photo { height: 180px; }
             .location-name { font-size: 22px; }
             .form-container { padding: 20px 14px; }
@@ -329,13 +401,17 @@
             .farewell-text { font-size: 22px; }
             .dresscode-intro { font-size: 16px; }
             .form-deadline { font-size: 16px; }
+            .tab-btn { padding: 9px 16px; font-size: 11px; }
+            .tabs-nav { gap: 6px; }
+            .tabs-content.active { gap: 10px; }
+            .dress-photo-center { max-width: 180px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== СЕКЦИЯ 1: ОБЛОЖКА ===== -->
-    <section class="reveal">
+    <!-- ===== СЕКЦИЯ 1: ОБЛОЖКА (ЖЁЛТЫЙ) ===== -->
+    <section class="reveal section-yellow" style="padding-top: 80px;">
         <h1 class="hero-names">Антон<br>и Мария</h1>
         <p class="hero-subtitle">Мы женимся!</p>
 
@@ -344,10 +420,7 @@
             <div class="photo-child" style="background-image: url('шри.jpg');"></div>
         </div>
 
-        <p class="hero-quote">«Однажды и навсегда...»</p>
-        <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 18px; color: #888; margin-bottom: 14px;">
-            — так мы ответили друг другу,<br>когда поняли, что встретили свою судьбу
-        </p>
+        <p class="hero-quote">Найти любовь и дружбу в одном человеке — значит выиграть эту жизнь!</p>
 
         <p class="hero-date">07.08.2026</p>
 
@@ -357,20 +430,20 @@
         <audio id="music" src="Frank_Sinatra_-_I_Love_You_Baby_68906697.mp3" preload="auto"></audio>
     </section>
 
-    <!-- ===== СЕКЦИЯ 2: ПРИГЛАШЕНИЕ ===== -->
-    <section class="section-primary reveal">
-        <p class="invitation-text">
+    <!-- ===== СЕКЦИЯ 2: ПРИГЛАШЕНИЕ (ЗЕЛЁНЫЙ) ===== -->
+    <section class="reveal section-green">
+        <p class="invitation-text-white">
             Дорогие, любимые, самые родные!
             <br><br>
-            Мы стоим на пороге самого важного дня в нашей жизни — дня, когда две души станут одной семьёй. И нам невероятно важно, чтобы в этот момент вы были рядом.
+            Такой день невозможно представить без тех, кто был рядом все это время. Мы будем счастливы, если вы станете частью нашего самого важного дня.
             <br><br>
             Ваше присутствие — это самый тёплый подарок, который мы можем себе представить. Приходите, чтобы разделить с нами эту радость, смеяться, плакать от счастья и танцевать до утра.
-            <span class="invitation-highlight">Мы ждём именно вас</span>
+            <span class="invitation-highlight" style="color: #FFF1A0;">Мы ждём именно вас</span>
         </p>
     </section>
 
-    <!-- ===== СЕКЦИЯ 3: КАЛЕНДАРЬ ===== -->
-    <section class="reveal">
+    <!-- ===== СЕКЦИЯ 3: КАЛЕНДАРЬ (ОРАНЖЕВЫЙ) ===== -->
+    <section class="reveal section-orange">
         <h2 class="serif-title">Когда?</h2>
         <p class="serif-subtitle">август, 2026</p>
 
@@ -387,7 +460,7 @@
             <div></div><div></div>
             <div class="calendar-day">3</div><div class="calendar-day">4</div>
             <div class="calendar-day">5</div><div class="calendar-day">6</div>
-            <div class="calendar-day wedding"><span></span>7</div>
+            <div class="calendar-day wedding">7</div>
             <div class="calendar-day">8</div>
             <div class="calendar-day">9</div><div class="calendar-day">10</div>
             <div class="calendar-day">11</div><div class="calendar-day">12</div>
@@ -400,8 +473,8 @@
         </p>
     </section>
 
-    <!-- ===== СЕКЦИЯ 4: ЛОКАЦИЯ ===== -->
-    <section class="reveal" style="background: #fafaf8;">
+    <!-- ===== СЕКЦИЯ 4: ЛОКАЦИЯ (РОЗОВЫЙ) ===== -->
+    <section class="reveal section-pink">
         <h2 class="serif-title">Где?</h2>
         <p class="serif-subtitle">location</p>
 
@@ -412,19 +485,19 @@
             Московская область, городской округ Подольск,<br>деревня Бережки
         </p>
 
-        <p class="warm-text" style="font-size: 18px; color: #666; margin-bottom: 24px; max-width: 320px; margin-left: auto; margin-right: auto;">
+        <p class="warm-text" style="font-size: 18px; color: #4a4a4a; margin-bottom: 24px; max-width: 320px; margin-left: auto; margin-right: auto;">
             Уютное место среди природы, где каждый уголок дышит теплом и романтикой. Здесь мы скажем друг другу самые важные слова.
         </p>
 
-        <a href="https://yandex.ru/maps/org/zolotoy_sazan/155312911468?si=vh7u40c3azzjt7m7j47a3r8ud0" target="_blank" class="map-btn">
+        <a href="https://yandex.ru/maps/org/zolotoy_sazan/155312911468?si=vh7u40c3azzjt7m7j47a3r8ud0" target="_blank" class="map-btn map-btn-yellow">
             <i class="fas fa-map-marker-alt"></i> Открыть карту
         </a>
     </section>
 
-    <!-- ===== СЕКЦИЯ 5: ТАЙМИНГ ===== -->
-    <section class="reveal">
-        <h2 class="serif-title">План дня</h2>
-        <p class="serif-subtitle">timing</p>
+    <!-- ===== СЕКЦИЯ 5: ТАЙМИНГ (ЗЕЛЁНЫЙ) ===== -->
+    <section class="reveal section-green">
+        <h2 class="serif-title" style="color: #ffffff;">План дня</h2>
+        <p class="serif-subtitle-white">timing</p>
 
         <div class="timeline">
             <div class="timeline-item">
@@ -457,10 +530,10 @@
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 6: ТАЙМЕР ===== -->
-    <section class="section-primary reveal">
-        <h2 class="serif-title-white">До торжества осталось</h2>
-        <p class="warm-text" style="color: rgba(255,255,255,0.8); font-size: 18px; max-width: 300px; margin: 0 auto 14px;">
+    <!-- ===== СЕКЦИЯ 6: ТАЙМЕР (ОРАНЖЕВЫЙ) ===== -->
+    <section class="reveal section-orange">
+        <h2 class="serif-title">До торжества осталось</h2>
+        <p class="warm-text" style="color: #4a4a4a; font-size: 18px; max-width: 300px; margin: 0 auto 14px;">
             Мы считаем каждый день, и с каждым днём сердце бьётся всё чаще в предвкушении нашей встречи
         </p>
         <div class="timer-wrapper">
@@ -488,8 +561,8 @@
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 7: ДРЕСС-КОД ===== -->
-    <section class="reveal" style="background: #fcfcfc;">
+    <!-- ===== СЕКЦИЯ 7: ДРЕСС-КОД (БЕЛЫЙ) ===== -->
+    <section class="reveal section-white">
         <h2 class="serif-title">Дресс-код</h2>
         <p class="serif-subtitle">dress-code</p>
 
@@ -503,7 +576,7 @@
             <div class="color-circle" style="background: #FFB3D9;" title="Розовый"></div>
             <div class="color-circle" style="background: #D9B3D9;" title="Лиловый"></div>
             <div class="color-circle" style="background: #FFC966;" title="Оранжевый"></div>
-            <div class="color-circle" style="background: #A8D9A8;" title="Зелёный"></div>
+            <div class="color-circle" style="background: #7BC67E;" title="Зелёный"></div>
         </div>
 
         <div class="tabs-nav">
@@ -520,34 +593,32 @@
             </div>
         </div>
 
+        <!-- ДЛЯ НЕГО — ОДНО ФОТО СТРОГО ПО ЦЕНТРУ -->
         <div id="for-him" class="tabs-content">
-            <div>
-                <div class="dress-photo" style="background-image: url('3.png');"></div>
-            </div>
-            <div>
-                <div class="dress-photo" style="background-image: url('4.png');"></div>
+            <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                <div class="dress-photo-center"></div>
             </div>
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 8: ПОЖЕЛАНИЯ ===== -->
-    <section class="section-primary reveal">
-        <h2 class="serif-title-white">Пожелания</h2>
-        <p class="serif-subtitle" style="color: rgba(255,255,255,0.7); font-size: 17px;">wishes</p>
+    <!-- ===== СЕКЦИЯ 8: ПОЖЕЛАНИЯ (ЗЕЛЁНЫЙ) ===== -->
+    <section class="reveal section-green">
+        <h2 class="serif-title" style="color: #ffffff;">Пожелания</h2>
+        <p class="serif-subtitle-white">wishes</p>
 
-        <p class="invitation-text" style="font-size: 20px; margin-bottom: 20px;">
+        <p class="invitation-text-white" style="font-size: 20px; margin-bottom: 20px;">
             Если вы захотите порадовать нас подарком, мы будем очень благодарны за вклад в бюджет нашей молодой семьи — это поможет нам начать совместную жизнь с уверенностью и теплом.
         </p>
-        <p class="invitation-text" style="font-size: 20px; margin-bottom: 20px;">
+        <p class="invitation-text-white" style="font-size: 20px; margin-bottom: 20px;">
             Просим вас воздержаться от цветов: сразу после свадьбы мы уезжаем в свадебное путешествие и не сможем насладиться их красотой.
         </p>
-        <p class="invitation-text" style="font-size: 20px;">
+        <p class="invitation-text-white" style="font-size: 20px;">
             Чтобы вечер получился лёгким, спокойным и по-настоящему праздничным, мы решили провести его в формате 18+. Надеемся на ваше понимание и поддержку.
         </p>
     </section>
 
-    <!-- ===== СЕКЦИЯ 9: АНКЕТА ГОСТЯ ===== -->
-    <section class="reveal">
+    <!-- ===== СЕКЦИЯ 9: АНКЕТА ГОСТЯ (ЖЁЛТЫЙ) ===== -->
+    <section class="reveal section-yellow">
         <h2 class="serif-title">Анкета гостя</h2>
         <p class="serif-subtitle">rsvp</p>
         <p class="form-deadline">Пожалуйста, подтвердите присутствие<br>до 20 июля 2026</p>
@@ -605,16 +676,16 @@
                     <textarea name="allergyText" class="form-textarea" placeholder="Укажите продукты, которые вам нельзя..."></textarea>
                 </div>
 
-                <button type="submit" class="form-submit">Отправить</button>
+                <button type="submit" class="form-submit form-submit-orange">Отправить</button>
             </form>
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 10: КОНТАКТЫ ===== -->
-    <section class="reveal" style="padding-bottom: 90px;">
+    <!-- ===== СЕКЦИЯ 10: КОНТАКТЫ (ОРАНЖЕВЫЙ) ===== -->
+    <section class="reveal section-orange" style="padding-bottom: 90px;">
         <h2 class="serif-title" style="margin-bottom: 26px;">Связь с нами</h2>
 
-        <p style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 19px; color: #666; margin-bottom: 26px;">
+        <p style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 19px; color: #4a4a4a; margin-bottom: 26px;">
             По всем вопросам вы можете обратиться к нашему координатору
         </p>
 
@@ -627,7 +698,7 @@
             </a>
         </div>
 
-        <p style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 17px; color: #888; margin-bottom: 32px;">
+        <p style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 17px; color: #4a4a4a; margin-bottom: 32px;">
             +7 (903) 275-03-99
         </p>
 
@@ -637,13 +708,13 @@
     </section>
 
     <script>
-        // Анимация появления
+        // АНИМАЦИЯ ПРИ СКРОЛЛЕ
         function revealOnScroll() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 120;
+                var elementVisible = 100;
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
                 }
@@ -651,7 +722,6 @@
         }
         window.addEventListener("scroll", revealOnScroll);
         window.addEventListener("load", revealOnScroll);
-        revealOnScroll();
 
         // Вкладки дресс-кода
         function openTab(evt, tabName) {
@@ -726,7 +796,7 @@
         }
         startCountdown();
 
-        // Аллергия — изначально не выбрано, поле скрыто
+        // Аллергия
         var allergyRadios = document.querySelectorAll('input[name="allergy"]');
         var allergyDetails = document.getElementById('allergyDetails');
 
@@ -741,7 +811,7 @@
             });
         }
 
-        // Отправка формы через Formspree (без перехода на сайт)
+        // Отправка формы
         var rsvpForm = document.getElementById('rsvpForm');
         if (rsvpForm) {
             rsvpForm.addEventListener('submit', function(e) {
