@@ -46,8 +46,8 @@
             width: 100%; 
             padding: 60px 26px; 
             text-align: center; 
-            margin-bottom: 20px;
-            border-radius: 8px;
+            margin-bottom: 0; /* Убираем отступы между блоками */
+            border-radius: 0; /* Убираем скругление */
         }
 
         .section-yellow { background: #FFF1A0; color: #2d2d2d; }
@@ -59,7 +59,7 @@
         .section-dresscode { 
             background: #ffffff; 
             color: #2d2d2d; 
-            border: 1px solid #eee;
+            border: none; /* Убираем рамку */
         }
 
         .serif-title {
@@ -268,7 +268,6 @@
         .tabs-content { display: none; }
         .tabs-content.active { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         
-        /* Вкладка "ДЛЯ НЕГО" — центрируем фото */
         #for-him.active {
             display: flex !important;
             justify-content: center;
@@ -277,7 +276,6 @@
         
         .dress-photo { width: 100%; aspect-ratio: 3/4; background-size: cover; background-position: center; background-color: #f5f3f0; border-radius: 4px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); }
 
-        /* ФОТО ДЛЯ НЕГО — СТРОГО ПО ЦЕНТРУ */
         .dress-photo-center {
             width: 100%;
             max-width: 280px;
@@ -336,7 +334,7 @@
         .farewell-text { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 28px; color: #2d2d2d; margin-top: 38px; line-height: 1.6; }
 
         @media (max-width: 420px) {
-            section { padding: 48px 20px; margin-bottom: 16px; }
+            section { padding: 48px 20px; }
             .hero-names { font-size: 38px; letter-spacing: 4px; }
             .hero-date { font-size: 30px; letter-spacing: 5px; }
             .hero-subtitle { font-size: 18px; margin-bottom: 24px; }
@@ -373,7 +371,7 @@
             .dress-photo-center { max-width: 220px; }
         }
         @media (max-width: 360px) {
-            section { padding: 40px 16px; margin-bottom: 12px; }
+            section { padding: 40px 16px; }
             .hero-names { font-size: 32px; letter-spacing: 3px; }
             .hero-date { font-size: 26px; letter-spacing: 4px; }
             .hero-subtitle { font-size: 16px; }
@@ -589,7 +587,6 @@
                 <button class="tab-btn" onclick="openTab(event, 'for-him')">ДЛЯ НЕГО</button>
             </div>
 
-            <!-- ДЛЯ НЕЁ — 2 фото -->
             <div id="for-her" class="tabs-content active">
                 <div>
                     <div class="dress-photo" style="background-image: url('1.png');"></div>
@@ -599,7 +596,6 @@
                 </div>
             </div>
 
-            <!-- ДЛЯ НЕГО — 1 фото СТРОГО ПО ЦЕНТРУ -->
             <div id="for-him" class="tabs-content">
                 <div class="dress-photo-center"></div>
             </div>
