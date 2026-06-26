@@ -16,7 +16,7 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
         body {
-            background-color: #ffffff;
+            background: linear-gradient(135deg, #FFF8E7 0%, #FFF0F5 30%, #F5F0FF 60%, #FFF5E6 100%);
             margin: 0;
             padding: 0;
             display: flex;
@@ -35,125 +35,156 @@
         .reveal-delay-1 { transition-delay: 0.15s; }
         .reveal-delay-2 { transition-delay: 0.3s; }
 
-        section { max-width: 430px; width: 100%; padding: 60px 26px; text-align: center; }
-        .section-primary { background-color: #2d4c3e; color: #ffffff; }
+        section { max-width: 430px; width: 100%; padding: 60px 26px; text-align: center; border-radius: 12px; margin-bottom: 16px; }
+
+        /* Яркие цветные блоки */
+        .section-dopamine-1 { background: linear-gradient(135deg, #FFB3D9 0%, #FFD4A8 100%); color: #2d2d2d; }
+        .section-dopamine-2 { background: linear-gradient(135deg, #A8D9A8 0%, #D9B3D9 100%); color: #2d2d2d; }
+        .section-dopamine-3 { background: linear-gradient(135deg, #FFE4A0 0%, #FFC966 100%); color: #2d2d2d; }
+        .section-dopamine-4 { background: linear-gradient(135deg, #D9B3D9 0%, #FFB3D9 100%); color: #2d2d2d; }
+        .section-dopamine-5 { background: linear-gradient(135deg, #FFC966 0%, #FFA07A 100%); color: #2d2d2d; }
+        .section-dopamine-6 { background: linear-gradient(135deg, #FFF1A0 0%, #FFD4A8 100%); color: #2d2d2d; }
+        .section-dopamine-7 { background: linear-gradient(135deg, #A8D9A8 0%, #B5E6B5 100%); color: #2d2d2d; }
+        .section-dopamine-8 { background: linear-gradient(135deg, #FFB3D9 0%, #FF8FAB 100%); color: #2d2d2d; }
+        .section-dopamine-9 { background: linear-gradient(135deg, #FFF8E7 0%, #FFE4A0 100%); color: #2d2d2d; }
+        .section-dopamine-10 { background: linear-gradient(135deg, #F5F0FF 0%, #D9B3D9 100%); color: #2d2d2d; }
 
         .serif-title {
             font-family: 'Cormorant Garamond', serif;
-            font-weight: 400;
+            font-weight: 600;
             letter-spacing: 4px;
-            color: #2d4c3e;
+            color: #2d2d2d;
             font-size: 32px;
             margin-bottom: 10px;
             text-transform: uppercase;
+            text-shadow: 2px 2px 0 rgba(255,215,0,0.3);
         }
         .serif-title-white {
             font-family: 'Cormorant Garamond', serif;
-            font-weight: 400;
+            font-weight: 600;
             letter-spacing: 4px;
-            color: #ffffff;
+            color: #2d2d2d;
             font-size: 30px;
             text-transform: uppercase;
+            text-shadow: 2px 2px 0 rgba(255,215,0,0.3);
         }
         .serif-subtitle {
             font-family: 'Cormorant Garamond', serif;
-            font-weight: 300;
+            font-weight: 400;
             font-style: italic;
-            color: #6b6b6b;
+            color: #4a4a4a;
             letter-spacing: 2px;
             font-size: 19px;
             margin-bottom: 32px;
         }
         .warm-text {
             font-family: 'Cormorant Garamond', serif;
-            font-weight: 300;
+            font-weight: 400;
             font-style: italic;
             line-height: 1.8;
             font-size: 20px;
-            color: #555;
+            color: #2d2d2d;
         }
         .quote-text {
             font-family: 'Cormorant Garamond', serif;
-            font-weight: 300;
+            font-weight: 400;
             font-style: italic;
             font-size: 24px;
-            color: #2d4c3e;
+            color: #2d2d2d;
             line-height: 1.6;
         }
 
         /* Hero */
         .hero-names {
             font-family: 'Cormorant Garamond', serif;
-            color: #2d4c3e;
+            color: #2d2d2d;
             font-size: 52px;
             text-transform: uppercase;
             letter-spacing: 6px;
-            font-weight: 300;
+            font-weight: 600;
             margin-bottom: 10px;
             line-height: 1.2;
+            text-shadow: 3px 3px 0 rgba(255,215,0,0.4), 0 0 20px rgba(255,183,77,0.2);
         }
         .hero-subtitle {
             font-family: 'Cormorant Garamond', serif;
             font-style: italic;
-            font-weight: 300;
+            font-weight: 400;
             font-size: 22px;
-            color: #6b6b6b;
+            color: #4a4a4a;
             margin-bottom: 32px;
             letter-spacing: 3px;
         }
         .photo-row { display: flex; gap: 16px; margin: 25px 0; }
-        .photo-child { aspect-ratio: 3/4; background-size: cover; background-position: center; width: 100%; background-color: #f5f3f0; border-radius: 2px; box-shadow: 0 8px 25px rgba(0,0,0,0.06); transition: transform 0.5s ease; }
-        .photo-child:hover { transform: scale(1.02); }
+        .photo-child { aspect-ratio: 3/4; background-size: cover; background-position: center; width: 100%; background-color: #f5f3f0; border-radius: 12px; box-shadow: 0 8px 30px rgba(255,183,77,0.25); transition: transform 0.5s ease, box-shadow 0.3s ease; border: 3px solid #FFD4A8; }
+        .photo-child:hover { transform: scale(1.03) rotate(-1deg); box-shadow: 0 12px 40px rgba(255,183,77,0.4); }
         .hero-quote {
             font-family: 'Cormorant Garamond', serif;
             font-style: italic;
-            font-weight: 300;
+            font-weight: 500;
             font-size: 26px;
-            color: #2d4c3e;
+            color: #2d2d2d;
             margin: 20px 0 8px;
             line-height: 1.5;
+            background: rgba(255,255,255,0.5);
+            display: inline-block;
+            padding: 8px 24px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
         }
         .hero-date {
             font-family: 'Cormorant Garamond', serif;
             font-size: 38px;
-            color: #2d4c3e;
-            font-weight: 300;
+            color: #2d2d2d;
+            font-weight: 600;
             letter-spacing: 8px;
             margin: 26px 0 32px;
+            background: rgba(255,255,255,0.4);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
         }
         .play-btn {
-            background: none;
-            border: 2px solid #2d4c3e;
+            background: linear-gradient(135deg, #FFD4A8, #FFB3D9);
+            border: 2px solid #2d2d2d;
             padding: 16px 32px;
             cursor: pointer;
             font-family: 'Inter', sans-serif;
-            font-weight: 400;
+            font-weight: 600;
             letter-spacing: 4px;
             font-size: 14px;
-            color: #2d4c3e;
+            color: #2d2d2d;
             transition: all 0.3s ease;
             text-transform: uppercase;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(255,183,77,0.3);
         }
-        .play-btn:hover { background: #2d4c3e; color: #fff; }
-        .play-btn.playing { background: #2d4c3e; color: #fff; }
+        .play-btn:hover { background: linear-gradient(135deg, #FFB3D9, #FFD4A8); transform: scale(1.05); box-shadow: 0 6px 25px rgba(255,183,77,0.5); }
+        .play-btn.playing { background: linear-gradient(135deg, #A8D9A8, #D9B3D9); }
 
         /* Приглашение */
         .invitation-text {
             font-family: 'Cormorant Garamond', serif;
-            font-weight: 300;
+            font-weight: 400;
             font-size: 22px;
             line-height: 2;
-            color: #ffffff;
+            color: #2d2d2d;
             max-width: 360px;
             margin: 0 auto;
         }
         .invitation-highlight {
             font-size: 26px;
-            font-weight: 400;
+            font-weight: 600;
             font-style: italic;
             display: block;
             margin-top: 18px;
             letter-spacing: 2px;
+            color: #D43D6B;
+            background: rgba(255,255,255,0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
         }
 
         /* Календарь */
@@ -163,42 +194,42 @@
             gap: 7px;
             font-size: 16px;
             font-family: 'Inter', sans-serif;
-            font-weight: 300;
+            font-weight: 400;
             max-width: 320px;
             margin: 0 auto 35px;
         }
-        .calendar-day-header { opacity: 0.5; font-size: 12px; letter-spacing: 2px; padding-bottom: 8px; }
-        .calendar-day { padding: 6px 2px; }
-        .calendar-day.wedding { position: relative; z-index: 1; font-weight: 500; color: #2d4c3e; font-size: 18px; }
-        .calendar-day.wedding span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30px; height: 30px; background: #fff; border-radius: 50%; z-index: -1; border: 1px solid rgba(45,76,62,0.2); }
+        .calendar-day-header { opacity: 0.6; font-size: 12px; letter-spacing: 2px; padding-bottom: 8px; font-weight: 500; }
+        .calendar-day { padding: 6px 2px; background: rgba(255,255,255,0.2); border-radius: 8px; }
+        .calendar-day.wedding { position: relative; z-index: 1; font-weight: 600; color: #D43D6B; font-size: 18px; background: rgba(255,215,0,0.3); border-radius: 50%; }
+        .calendar-day.wedding span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 34px; height: 34px; background: #FFD700; border-radius: 50%; z-index: -1; border: 2px solid #FF8FAB; box-shadow: 0 0 20px rgba(255,215,0,0.5); }
 
         /* Тайминг */
         .timeline { position: relative; padding: 22px 0; max-width: 340px; margin: 0 auto; }
-        .timeline::before { content: ''; position: absolute; left: 50%; width: 1px; height: 100%; background: rgba(45,76,62,0.25); transform: translateX(-50%); }
+        .timeline::before { content: ''; position: absolute; left: 50%; width: 3px; height: 100%; background: linear-gradient(to bottom, #FFB3D9, #FFD4A8, #A8D9A8); transform: translateX(-50%); border-radius: 4px; }
         .timeline-item { position: relative; margin-bottom: 38px; width: 100%; display: flex; justify-content: space-between; align-items: flex-start; }
-        .timeline-content { width: 44%; padding: 0; }
+        .timeline-content { width: 44%; padding: 0; background: rgba(255,255,255,0.3); padding: 12px 14px; border-radius: 12px; backdrop-filter: blur(10px); }
         .timeline-item:nth-child(odd) { flex-direction: row-reverse; text-align: left; }
         .timeline-item:nth-child(even) { text-align: right; }
-        .t-time { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 24px; color: #2d4c3e; display: block; letter-spacing: 3px; margin-bottom: 4px; }
-        .t-event { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 19px; line-height: 1.3; }
-        .t-desc { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 13px; color: #888; margin-top: 5px; line-height: 1.5; }
+        .t-time { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 24px; color: #D43D6B; display: block; letter-spacing: 3px; margin-bottom: 4px; }
+        .t-event { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 19px; line-height: 1.3; color: #2d2d2d; }
+        .t-desc { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 13px; color: #4a4a4a; margin-top: 5px; line-height: 1.5; }
 
         /* Таймер */
         .timer-wrapper { display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 24px; }
         .timer-container { display: flex; justify-content: center; align-items: baseline; gap: 2.5vw; flex-wrap: nowrap; width: 100%; }
-        .timer-item { background: none; padding: 8px 4px; min-width: 0; border: none; text-align: center; flex-shrink: 1; }
-        .timer-val { display: block; font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 10vw, 52px); font-weight: 300; letter-spacing: 2px; line-height: 1; color: #ffffff; white-space: nowrap; }
-        .timer-label { font-family: 'Inter', sans-serif; font-weight: 300; font-size: clamp(10px, 2.5vw, 13px); text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; display: block; margin-top: 6px; white-space: nowrap; }
-        .timer-separator { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 8vw, 40px); font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1; padding-bottom: clamp(14px, 3vw, 22px); flex-shrink: 0; }
+        .timer-item { background: rgba(255,255,255,0.3); padding: 12px 8px; min-width: 0; border: none; text-align: center; flex-shrink: 1; border-radius: 12px; backdrop-filter: blur(10px); }
+        .timer-val { display: block; font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 10vw, 52px); font-weight: 600; letter-spacing: 2px; line-height: 1; color: #2d2d2d; white-space: nowrap; }
+        .timer-label { font-family: 'Inter', sans-serif; font-weight: 400; font-size: clamp(10px, 2.5vw, 13px); text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; display: block; margin-top: 6px; white-space: nowrap; color: #2d2d2d; }
+        .timer-separator { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 8vw, 40px); font-weight: 300; color: #2d2d2d; line-height: 1; padding-bottom: clamp(14px, 3vw, 22px); flex-shrink: 0; opacity: 0.5; }
         @media (max-width: 360px) { .timer-container { gap: 1.5vw; } .timer-item { padding: 4px 2px; } }
 
         /* Дресс-код */
         .dresscode-intro {
             font-family: 'Cormorant Garamond', serif;
-            font-weight: 300;
+            font-weight: 400;
             font-style: italic;
             font-size: 20px;
-            color: #555;
+            color: #2d2d2d;
             margin-bottom: 20px;
             line-height: 1.7;
             max-width: 350px;
@@ -206,14 +237,16 @@
             margin-right: auto;
         }
         .color-palette { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin: 20px 0 30px; }
-        .color-circle { width: 45px; height: 45px; border-radius: 50%; display: inline-block; border: 2px solid rgba(0,0,0,0.06); box-shadow: 0 3px 10px rgba(0,0,0,0.04); transition: transform 0.3s ease; }
-        .color-circle:hover { transform: scale(1.1); }
+        .color-circle { width: 45px; height: 45px; border-radius: 50%; display: inline-block; border: 3px solid #2d2d2d; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+        .color-circle:hover { transform: scale(1.15) rotate(-5deg); }
         .tabs-nav { display: flex; justify-content: center; gap: 12px; margin-bottom: 30px; }
-        .tab-btn { background: none; border: 1px solid #2d4c3e; color: #2d4c3e; padding: 12px 28px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; letter-spacing: 2px; cursor: pointer; transition: all 0.3s ease; }
-        .tab-btn.active { background-color: #2d4c3e; color: #ffffff; }
+        .tab-btn { background: rgba(255,255,255,0.4); border: 2px solid #2d2d2d; color: #2d2d2d; padding: 12px 28px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 2px; cursor: pointer; transition: all 0.3s ease; border-radius: 30px; }
+        .tab-btn.active { background: linear-gradient(135deg, #FFD4A8, #FFB3D9); color: #2d2d2d; border-color: #D43D6B; }
+        .tab-btn:hover { transform: scale(1.05); }
         .tabs-content { display: none; animation: fadeIn 0.5s ease; }
         .tabs-content.active { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-        .dress-photo { width: 100%; aspect-ratio: 3/4; background-size: cover; background-position: center; background-color: #f5f3f0; border-radius: 2px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); }
+        .dress-photo { width: 100%; aspect-ratio: 3/4; background-size: cover; background-position: center; background-color: #f5f3f0; border-radius: 12px; box-shadow: 0 6px 25px rgba(0,0,0,0.1); border: 3px solid #FFD4A8; transition: transform 0.3s ease; }
+        .dress-photo:hover { transform: scale(1.03); }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         /* Локация */
@@ -224,39 +257,40 @@
             background-size: cover;
             background-position: center;
             margin-bottom: 24px;
-            border-radius: 2px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            border: 3px solid #FFD4A8;
         }
-        .location-name { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 26px; color: #2d4c3e; letter-spacing: 3px; margin-bottom: 6px; }
-        .location-address { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; color: #666; line-height: 1.7; margin-bottom: 26px; }
-        .map-btn { display: inline-block; text-decoration: none; background: #2d4c3e; color: #fff; padding: 16px 34px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; transition: all 0.3s ease; border-radius: 2px; border: none; cursor: pointer; }
-        .map-btn:hover { background: #1e3529; }
+        .location-name { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 26px; color: #2d2d2d; letter-spacing: 3px; margin-bottom: 6px; }
+        .location-address { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px; color: #4a4a4a; line-height: 1.7; margin-bottom: 26px; }
+        .map-btn { display: inline-block; text-decoration: none; background: linear-gradient(135deg, #FFD4A8, #FFB3D9); color: #2d2d2d; padding: 16px 34px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; transition: all 0.3s ease; border-radius: 30px; border: 2px solid #2d2d2d; box-shadow: 0 4px 15px rgba(255,183,77,0.3); }
+        .map-btn:hover { transform: scale(1.05); box-shadow: 0 6px 25px rgba(255,183,77,0.5); }
         .map-btn i { margin-right: 10px; }
 
         /* Анкета */
-        .form-container { background: #fafaf8; padding: 32px 24px; border: 1px solid #eee; text-align: left; border-radius: 2px; }
-        .form-label { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 20px; color: #2d4c3e; display: block; margin-bottom: 8px; letter-spacing: 1px; }
-        .form-input, .form-select, .form-textarea { width: 100%; padding: 14px 16px; margin: 0 0 24px; border: 1px solid #e0ddd6; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; background: #fff; outline: none; transition: border-color 0.3s ease; -webkit-appearance: none; -moz-appearance: none; appearance: none; color: #2d2d2d; }
-        .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: #2d4c3e; }
-        .form-input::placeholder, .form-textarea::placeholder { color: #aaa; }
-        .form-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%232d4c3e' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; cursor: pointer; color: #2d2d2d; }
+        .form-container { background: rgba(255,255,255,0.6); padding: 32px 24px; border: 2px solid #FFD4A8; text-align: left; border-radius: 16px; backdrop-filter: blur(20px); box-shadow: 0 8px 30px rgba(255,183,77,0.15); }
+        .form-label { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 20px; color: #2d2d2d; display: block; margin-bottom: 8px; letter-spacing: 1px; }
+        .form-input, .form-select, .form-textarea { width: 100%; padding: 14px 16px; margin: 0 0 24px; border: 2px solid #FFD4A8; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px; background: rgba(255,255,255,0.5); outline: none; transition: border-color 0.3s ease; -webkit-appearance: none; -moz-appearance: none; appearance: none; color: #2d2d2d; border-radius: 12px; backdrop-filter: blur(10px); }
+        .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: #FF8FAB; box-shadow: 0 0 20px rgba(255,143,171,0.2); }
+        .form-input::placeholder, .form-textarea::placeholder { color: #888; }
+        .form-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%232d2d2d' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; cursor: pointer; color: #2d2d2d; }
         .form-select option { color: #2d2d2d; background: #fff; }
         .form-textarea { resize: vertical; min-height: 90px; }
         .radio-group { margin: 0 0 24px; display: flex; flex-direction: column; gap: 12px; }
-        .radio-option { display: flex; align-items: center; gap: 12px; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; cursor: pointer; color: #555; }
-        .radio-option input { accent-color: #2d4c3e; width: 18px; height: 18px; cursor: pointer; }
+        .radio-option { display: flex; align-items: center; gap: 12px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px; cursor: pointer; color: #2d2d2d; }
+        .radio-option input { accent-color: #FF8FAB; width: 18px; height: 18px; cursor: pointer; }
         .checkbox-group { margin: 0 0 24px; display: flex; flex-direction: column; gap: 10px; }
-        .checkbox-option { display: flex; align-items: center; gap: 12px; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; cursor: pointer; color: #555; }
-        .checkbox-option input { accent-color: #2d4c3e; width: 18px; height: 18px; cursor: pointer; flex-shrink: 0; }
-        .form-submit { width: 100%; background: #2d4c3e; color: #fff; border: none; padding: 17px; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 4px; font-size: 15px; text-transform: uppercase; cursor: pointer; transition: background 0.3s ease; }
-        .form-submit:hover { background: #1e3529; }
-        .form-deadline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 18px; color: #999; margin-bottom: 30px; text-align: center; }
+        .checkbox-option { display: flex; align-items: center; gap: 12px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px; cursor: pointer; color: #2d2d2d; }
+        .checkbox-option input { accent-color: #FF8FAB; width: 18px; height: 18px; cursor: pointer; flex-shrink: 0; }
+        .form-submit { width: 100%; background: linear-gradient(135deg, #FFD4A8, #FFB3D9); color: #2d2d2d; border: 2px solid #2d2d2d; padding: 17px; font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 4px; font-size: 15px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; border-radius: 30px; box-shadow: 0 4px 15px rgba(255,183,77,0.3); }
+        .form-submit:hover { transform: scale(1.02); box-shadow: 0 6px 25px rgba(255,183,77,0.5); }
+        .form-deadline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 18px; color: #4a4a4a; margin-bottom: 30px; text-align: center; background: rgba(255,255,255,0.3); padding: 12px; border-radius: 12px; }
 
         /* Контакты */
-        .contact-link { color: #2d4c3e; text-decoration: none; font-family: 'Inter', sans-serif; font-weight: 400; border-bottom: 1px solid #2d4c3e; margin: 0 14px; font-size: 16px; letter-spacing: 2px; transition: all 0.3s ease; }
-        .contact-link:hover { opacity: 0.7; }
+        .contact-link { color: #2d2d2d; text-decoration: none; font-family: 'Inter', sans-serif; font-weight: 600; border-bottom: 2px solid #FF8FAB; margin: 0 14px; font-size: 16px; letter-spacing: 2px; transition: all 0.3s ease; }
+        .contact-link:hover { opacity: 0.7; color: #D43D6B; }
         .contact-link i { margin-right: 8px; }
-        .farewell-text { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 28px; color: #2d4c3e; margin-top: 38px; line-height: 1.6; }
+        .farewell-text { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-style: italic; font-size: 28px; color: #D43D6B; margin-top: 38px; line-height: 1.6; text-shadow: 2px 2px 0 rgba(255,215,0,0.3); }
 
         /* Адаптив */
         @media (max-width: 420px) {
@@ -335,18 +369,17 @@
 <body>
 
     <!-- ===== СЕКЦИЯ 1: ОБЛОЖКА ===== -->
-    <section class="reveal">
+    <section class="reveal section-dopamine-1" style="border-radius: 0 0 30px 30px; padding-top: 80px;">
         <h1 class="hero-names">Антон<br>и Мария</h1>
         <p class="hero-subtitle">Мы женимся!</p>
 
-        <!-- Два фото на главном блоке: пальмы.jpg и шри.jpg -->
         <div class="photo-row">
             <div class="photo-child" style="background-image: url('пальмы.jpg');"></div>
             <div class="photo-child" style="background-image: url('шри.jpg');"></div>
         </div>
 
         <p class="hero-quote">«Однажды и навсегда...»</p>
-        <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 18px; color: #888; margin-bottom: 14px;">
+        <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 18px; color: #4a4a4a; margin-bottom: 14px;">
             — так мы ответили друг другу,<br>когда поняли, что встретили свою судьбу
         </p>
 
@@ -359,7 +392,7 @@
     </section>
 
     <!-- ===== СЕКЦИЯ 2: ПРИГЛАШЕНИЕ ===== -->
-    <section class="section-primary reveal">
+    <section class="reveal section-dopamine-2">
         <p class="invitation-text">
             Дорогие, любимые, самые родные!
             <br><br>
@@ -371,7 +404,7 @@
     </section>
 
     <!-- ===== СЕКЦИЯ 3: КАЛЕНДАРЬ ===== -->
-    <section class="reveal">
+    <section class="reveal section-dopamine-3">
         <h2 class="serif-title">Когда?</h2>
         <p class="serif-subtitle">август, 2026</p>
 
@@ -402,7 +435,7 @@
     </section>
 
     <!-- ===== СЕКЦИЯ 4: ЛОКАЦИЯ ===== -->
-    <section class="reveal" style="background: #fafaf8;">
+    <section class="reveal section-dopamine-4">
         <h2 class="serif-title">Где?</h2>
         <p class="serif-subtitle">location</p>
 
@@ -413,7 +446,7 @@
             Московская область, городской округ Подольск,<br>деревня Бережки
         </p>
 
-        <p class="warm-text" style="font-size: 18px; color: #666; margin-bottom: 24px; max-width: 320px; margin-left: auto; margin-right: auto;">
+        <p class="warm-text" style="font-size: 18px; color: #4a4a4a; margin-bottom: 24px; max-width: 320px; margin-left: auto; margin-right: auto;">
             Уютное место среди природы, где каждый уголок дышит теплом и романтикой. Здесь мы скажем друг другу самые важные слова.
         </p>
 
@@ -423,7 +456,7 @@
     </section>
 
     <!-- ===== СЕКЦИЯ 5: ТАЙМИНГ ===== -->
-    <section class="reveal">
+    <section class="reveal section-dopamine-5">
         <h2 class="serif-title">План дня</h2>
         <p class="serif-subtitle">timing</p>
 
@@ -459,9 +492,9 @@
     </section>
 
     <!-- ===== СЕКЦИЯ 6: ТАЙМЕР ===== -->
-    <section class="section-primary reveal">
+    <section class="reveal section-dopamine-6">
         <h2 class="serif-title-white">До торжества осталось</h2>
-        <p class="warm-text" style="color: rgba(255,255,255,0.8); font-size: 18px; max-width: 300px; margin: 0 auto 14px;">
+        <p class="warm-text" style="color: #2d2d2d; font-size: 18px; max-width: 300px; margin: 0 auto 14px;">
             Мы считаем каждый день, и с каждым днём сердце бьётся всё чаще в предвкушении нашей встречи
         </p>
         <div class="timer-wrapper">
@@ -490,13 +523,13 @@
     </section>
 
     <!-- ===== СЕКЦИЯ 7: ДРЕСС-КОД ===== -->
-    <section class="reveal" style="background: #fcfcfc;">
+    <section class="reveal section-dopamine-7">
         <h2 class="serif-title">Дресс-код</h2>
         <p class="serif-subtitle">dress-code</p>
 
         <p class="dresscode-intro">
             Мы будем очень рады, если вы поддержите яркую и сочную гамму нашей свадьбы!<br>
-            <span style="color:#2d4c3e; font-weight:400;">Жёлтый, розовый, лиловый, оранжевый, зелёный</span> — пусть ваш образ будет таким же солнечным, как этот день.
+            <span style="color:#D43D6B; font-weight:600;">Жёлтый, розовый, лиловый, оранжевый, зелёный</span> — пусть ваш образ будет таким же солнечным, как этот день.
         </p>
 
         <div class="color-palette">
@@ -532,9 +565,9 @@
     </section>
 
     <!-- ===== СЕКЦИЯ 8: ПОЖЕЛАНИЯ ===== -->
-    <section class="section-primary reveal">
+    <section class="reveal section-dopamine-8">
         <h2 class="serif-title-white">Пожелания</h2>
-        <p class="serif-subtitle" style="color: rgba(255,255,255,0.7); font-size: 17px;">wishes</p>
+        <p class="serif-subtitle" style="color: #4a4a4a; font-size: 17px;">wishes</p>
 
         <p class="invitation-text" style="font-size: 20px; margin-bottom: 20px;">
             Если вы захотите порадовать нас подарком, мы будем очень благодарны за вклад в бюджет нашей молодой семьи — это поможет нам начать совместную жизнь с уверенностью и теплом.
@@ -548,7 +581,7 @@
     </section>
 
     <!-- ===== СЕКЦИЯ 9: АНКЕТА ГОСТЯ ===== -->
-    <section class="reveal">
+    <section class="reveal section-dopamine-9">
         <h2 class="serif-title">Анкета гостя</h2>
         <p class="serif-subtitle">rsvp</p>
         <p class="form-deadline">Пожалуйста, подтвердите присутствие<br>до 20 июля 2026</p>
@@ -612,10 +645,10 @@
     </section>
 
     <!-- ===== СЕКЦИЯ 10: КОНТАКТЫ ===== -->
-    <section class="reveal" style="padding-bottom: 90px;">
+    <section class="reveal section-dopamine-10" style="border-radius: 30px 30px 0 0; padding-bottom: 90px;">
         <h2 class="serif-title" style="margin-bottom: 26px;">Связь с нами</h2>
 
-        <p style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 19px; color: #666; margin-bottom: 26px;">
+        <p style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-style: italic; font-size: 19px; color: #4a4a4a; margin-bottom: 26px;">
             По всем вопросам вы можете обратиться к нашему координатору
         </p>
 
@@ -628,7 +661,7 @@
             </a>
         </div>
 
-        <p style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 17px; color: #888; margin-bottom: 32px;">
+        <p style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 17px; color: #4a4a4a; margin-bottom: 32px;">
             +7 (903) 275-03-99
         </p>
 
