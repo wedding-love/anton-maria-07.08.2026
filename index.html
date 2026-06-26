@@ -30,7 +30,7 @@
             width: 100%;
         }
 
-        /* АНИМАЦИЯ ПОЯВЛЕНИЯ ТОЛЬКО ДЛЯ КОНТЕНТА (НЕ ДЛЯ БЛОКА) */
+        /* АНИМАЦИЯ ПОЯВЛЕНИЯ ТОЛЬКО ДЛЯ КОНТЕНТА */
         .reveal-content {
             opacity: 0;
             transform: translateY(30px);
@@ -50,14 +50,12 @@
             border-radius: 8px;
         }
 
-        /* Цветные блоки — сразу цветные, статичные */
         .section-yellow { background: #FFF1A0; color: #2d2d2d; }
         .section-orange { background: #FFC966; color: #2d2d2d; }
         .section-green { background: #7BC67E; color: #2d2d2d; }
         .section-pink { background: #FFB3D9; color: #2d2d2d; }
         .section-lilac { background: #D9B3D9; color: #2d2d2d; }
 
-        /* Фон для блока дресс-кода — белый */
         .section-dresscode { 
             background: #ffffff; 
             color: #2d2d2d; 
@@ -116,7 +114,6 @@
             color: rgba(255,255,255,0.85);
         }
 
-        /* Hero */
         .hero-names {
             font-family: 'Cormorant Garamond', serif;
             color: #2d2d2d;
@@ -172,7 +169,6 @@
         .play-btn:hover { background: #1e3529; opacity: 0.9; }
         .play-btn.playing { background: #7BC67E; }
 
-        /* Приглашение */
         .invitation-text {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
@@ -200,7 +196,6 @@
             letter-spacing: 2px;
         }
 
-        /* Календарь */
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -227,7 +222,6 @@
             margin: 0 auto; 
         }
 
-        /* Тайминг */
         .timeline { position: relative; padding: 22px 0; max-width: 340px; margin: 0 auto; }
         .timeline::before { content: ''; position: absolute; left: 50%; width: 1px; height: 100%; background: rgba(255,255,255,0.25); transform: translateX(-50%); }
         .timeline-item { position: relative; margin-bottom: 38px; width: 100%; display: flex; justify-content: space-between; align-items: flex-start; }
@@ -245,7 +239,6 @@
         .t-event { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 19px; line-height: 1.3; color: #ffffff; }
         .t-desc { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 5px; line-height: 1.5; }
 
-        /* Таймер */
         .timer-wrapper { display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 24px; }
         .timer-container { display: flex; justify-content: center; align-items: baseline; gap: 2.5vw; flex-wrap: nowrap; width: 100%; }
         .timer-item { background: rgba(255,255,255,0.2); padding: 8px 12px; min-width: 0; border: none; text-align: center; flex-shrink: 1; border-radius: 4px; }
@@ -254,7 +247,6 @@
         .timer-separator { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 8vw, 40px); font-weight: 300; color: #2d2d2d; line-height: 1; padding-bottom: clamp(14px, 3vw, 22px); flex-shrink: 0; opacity: 0.5; }
         @media (max-width: 360px) { .timer-container { gap: 1.5vw; } .timer-item { padding: 4px 8px; } }
 
-        /* Дресс-код */
         .dresscode-intro {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
@@ -275,22 +267,29 @@
         .tab-btn.active { background: #2d4c3e; color: #ffffff; border-color: #2d4c3e; }
         .tabs-content { display: none; }
         .tabs-content.active { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        
+        /* Вкладка "ДЛЯ НЕГО" — центрируем фото */
+        #for-him.active {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+        }
+        
         .dress-photo { width: 100%; aspect-ratio: 3/4; background-size: cover; background-position: center; background-color: #f5f3f0; border-radius: 4px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); }
 
-        /* ДЛЯ НЕГО — ОДНО ФОТО photo_2026-06-26_15-35-43.jpg СТРОГО ПО ЦЕНТРУ */
+        /* ФОТО ДЛЯ НЕГО — СТРОГО ПО ЦЕНТРУ */
         .dress-photo-center {
             width: 100%;
             max-width: 280px;
-            margin: 0 auto;
             aspect-ratio: 3/4;
             background-image: url('photo_2026-06-26_15-35-43.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 4px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            margin: 0 auto;
         }
 
-        /* Локация */
         .location-photo {
             width: 100%;
             height: 250px;
@@ -306,11 +305,9 @@
         .map-btn { display: inline-block; text-decoration: none; background: #2d4c3e; color: #ffffff; padding: 16px 34px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; transition: all 0.3s ease; border-radius: 2px; border: none; cursor: pointer; }
         .map-btn:hover { background: #1e3529; }
         .map-btn i { margin-right: 10px; }
-
         .map-btn-yellow { background: #FFF1A0; color: #2d2d2d; }
         .map-btn-yellow:hover { background: #f5e080; }
 
-        /* Анкета */
         .form-container { background: rgba(255,255,255,0.6); padding: 32px 24px; border: none; text-align: left; border-radius: 4px; }
         .form-label { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 20px; color: #2d2d2d; display: block; margin-bottom: 8px; letter-spacing: 1px; }
         .form-input, .form-select, .form-textarea { width: 100%; padding: 14px 16px; margin: 0 0 24px; border: 1px solid #ddd; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; background: #fff; outline: none; transition: border-color 0.3s ease; -webkit-appearance: none; -moz-appearance: none; appearance: none; color: #2d2d2d; border-radius: 2px; }
@@ -327,23 +324,17 @@
         .checkbox-option input { accent-color: #2d4c3e; width: 18px; height: 18px; cursor: pointer; flex-shrink: 0; }
         .form-submit { width: 100%; background: #2d4c3e; color: #ffffff; border: none; padding: 17px; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 4px; font-size: 15px; text-transform: uppercase; cursor: pointer; transition: background 0.3s ease; border-radius: 2px; }
         .form-submit:hover { background: #1e3529; }
-
         .form-submit-yellow { background: #FFF1A0; color: #2d2d2d; }
         .form-submit-yellow:hover { background: #f5e080; }
-
         .form-submit-orange { background: #FFC966; color: #2d2d2d; }
         .form-submit-orange:hover { background: #f0b850; }
-
         .form-deadline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 18px; color: #888; margin-bottom: 30px; text-align: center; }
 
-        /* Контакты */
         .contact-link { color: #2d2d2d; text-decoration: none; font-family: 'Inter', sans-serif; font-weight: 400; border-bottom: 1px solid #2d2d2d; margin: 0 14px; font-size: 16px; letter-spacing: 2px; transition: all 0.3s ease; }
         .contact-link:hover { opacity: 0.7; }
         .contact-link i { margin-right: 8px; }
-
         .farewell-text { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 28px; color: #2d2d2d; margin-top: 38px; line-height: 1.6; }
 
-        /* Адаптив */
         @media (max-width: 420px) {
             section { padding: 48px 20px; margin-bottom: 16px; }
             .hero-names { font-size: 38px; letter-spacing: 4px; }
@@ -423,21 +414,17 @@
 </head>
 <body>
 
-    <!-- ===== СЕКЦИЯ 1: ОБЛОЖКА (ЖЁЛТЫЙ) ===== -->
+    <!-- ===== СЕКЦИЯ 1: ОБЛОЖКА ===== -->
     <section class="section-yellow" style="padding-top: 80px;">
         <div class="reveal-content">
             <h1 class="hero-names">Антон<br>и Мария</h1>
             <p class="hero-subtitle">Мы женимся!</p>
-
             <div class="photo-row">
                 <div class="photo-child" style="background-image: url('пальмы.jpg');"></div>
                 <div class="photo-child" style="background-image: url('шри.jpg');"></div>
             </div>
-
             <p class="hero-quote">Найти любовь и дружбу в одном человеке — значит выиграть эту жизнь!</p>
-
             <p class="hero-date">07.08.2026</p>
-
             <button id="playBtn" class="play-btn">
                 <i class="fas fa-play"></i>&nbsp; МУЗЫКА
             </button>
@@ -445,7 +432,7 @@
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 2: ПРИГЛАШЕНИЕ (ЗЕЛЁНЫЙ) ===== -->
+    <!-- ===== СЕКЦИЯ 2: ПРИГЛАШЕНИЕ ===== -->
     <section class="section-green">
         <div class="reveal-content">
             <p class="invitation-text-white">
@@ -459,12 +446,11 @@
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 3: КАЛЕНДАРЬ (ОРАНЖЕВЫЙ) ===== -->
+    <!-- ===== СЕКЦИЯ 3: КАЛЕНДАРЬ ===== -->
     <section class="section-orange">
         <div class="reveal-content">
             <h2 class="serif-title">Когда?</h2>
             <p class="serif-subtitle">август, 2026</p>
-
             <div class="calendar-grid">
                 <div class="calendar-day-header">ПН</div>
                 <div class="calendar-day-header">ВТ</div>
@@ -473,7 +459,6 @@
                 <div class="calendar-day-header">ПТ</div>
                 <div class="calendar-day-header">СБ</div>
                 <div class="calendar-day-header">ВС</div>
-
                 <div></div><div></div><div></div><div></div><div></div>
                 <div></div><div></div>
                 <div class="calendar-day">3</div><div class="calendar-day">4</div>
@@ -485,42 +470,36 @@
                 <div class="calendar-day">13</div><div class="calendar-day">14</div>
                 <div class="calendar-day">15</div><div class="calendar-day">16</div>
             </div>
-
             <p class="warm-text" style="max-width: 320px; margin: 0 auto;">
                 Седьмой день августа — первый день нашей новой главы. Мы будем искренне рады видеть вас среди наших гостей, чтобы вместе сделать этот день по-настоящему незабываемым.
             </p>
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 4: ЛОКАЦИЯ (РОЗОВЫЙ) ===== -->
+    <!-- ===== СЕКЦИЯ 4: ЛОКАЦИЯ ===== -->
     <section class="section-pink">
         <div class="reveal-content">
             <h2 class="serif-title">Где?</h2>
             <p class="serif-subtitle">location</p>
-
             <div class="location-photo"></div>
-
             <p class="location-name">Шатёр в берёзовой роще</p>
             <p class="location-address">
                 Московская область, городской округ Подольск,<br>деревня Бережки
             </p>
-
             <p class="warm-text" style="font-size: 18px; color: #4a4a4a; margin-bottom: 24px; max-width: 320px; margin-left: auto; margin-right: auto;">
                 Уютное место среди природы, где каждый уголок дышит теплом и романтикой. Здесь мы скажем друг другу самые важные слова.
             </p>
-
             <a href="https://yandex.ru/maps/org/zolotoy_sazan/155312911468?si=vh7u40c3azzjt7m7j47a3r8ud0" target="_blank" class="map-btn map-btn-yellow">
                 <i class="fas fa-map-marker-alt"></i> Открыть карту
             </a>
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 5: ТАЙМИНГ (ЗЕЛЁНЫЙ) ===== -->
+    <!-- ===== СЕКЦИЯ 5: ТАЙМИНГ ===== -->
     <section class="section-green">
         <div class="reveal-content">
             <h2 class="serif-title" style="color: #ffffff;">План дня</h2>
             <p class="serif-subtitle-white">timing</p>
-
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
@@ -553,7 +532,7 @@
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 6: ТАЙМЕР (ОРАНЖЕВЫЙ) ===== -->
+    <!-- ===== СЕКЦИЯ 6: ТАЙМЕР ===== -->
     <section class="section-orange">
         <div class="reveal-content">
             <h2 class="serif-title">До торжества осталось</h2>
@@ -610,6 +589,7 @@
                 <button class="tab-btn" onclick="openTab(event, 'for-him')">ДЛЯ НЕГО</button>
             </div>
 
+            <!-- ДЛЯ НЕЁ — 2 фото -->
             <div id="for-her" class="tabs-content active">
                 <div>
                     <div class="dress-photo" style="background-image: url('1.png');"></div>
@@ -619,21 +599,18 @@
                 </div>
             </div>
 
-            <!-- ДЛЯ НЕГО — ФОТО photo_2026-06-26_15-35-43.jpg СТРОГО ПО ЦЕНТРУ -->
+            <!-- ДЛЯ НЕГО — 1 фото СТРОГО ПО ЦЕНТРУ -->
             <div id="for-him" class="tabs-content">
-                <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-                    <div class="dress-photo-center"></div>
-                </div>
+                <div class="dress-photo-center"></div>
             </div>
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 8: ПОЖЕЛАНИЯ (ЗЕЛЁНЫЙ) ===== -->
+    <!-- ===== СЕКЦИЯ 8: ПОЖЕЛАНИЯ ===== -->
     <section class="section-green">
         <div class="reveal-content">
             <h2 class="serif-title" style="color: #ffffff;">Пожелания</h2>
             <p class="serif-subtitle-white">wishes</p>
-
             <p class="invitation-text-white" style="font-size: 20px; margin-bottom: 20px;">
                 Если вы захотите порадовать нас подарком, мы будем очень благодарны за вклад в бюджет нашей молодой семьи — это поможет нам начать совместную жизнь с уверенностью и теплом.
             </p>
@@ -646,7 +623,7 @@
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 9: АНКЕТА ГОСТЯ (ЖЁЛТЫЙ) ===== -->
+    <!-- ===== СЕКЦИЯ 9: АНКЕТА ГОСТЯ ===== -->
     <section class="section-yellow">
         <div class="reveal-content">
             <h2 class="serif-title">Анкета гостя</h2>
@@ -655,7 +632,6 @@
 
             <div class="form-container">
                 <form id="rsvpForm" action="https://formspree.io/f/mzdldwak" method="POST">
-
                     <label class="form-label">Ваше имя и фамилия</label>
                     <input type="text" name="guestName" class="form-input" placeholder="Иван Петров" required>
 
@@ -712,15 +688,13 @@
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 10: КОНТАКТЫ (ОРАНЖЕВЫЙ) ===== -->
+    <!-- ===== СЕКЦИЯ 10: КОНТАКТЫ ===== -->
     <section class="section-orange" style="padding-bottom: 90px;">
         <div class="reveal-content">
             <h2 class="serif-title" style="margin-bottom: 26px;">Связь с нами</h2>
-
             <p style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 19px; color: #4a4a4a; margin-bottom: 26px;">
                 По всем вопросам вы можете обратиться к нашему координатору
             </p>
-
             <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 16px;">
                 <a href="tel:+79032750399" class="contact-link">
                     <i class="fas fa-phone"></i> Светлана
@@ -729,11 +703,9 @@
                     <i class="fab fa-telegram-plane"></i> @SvetikPrazdnik
                 </a>
             </div>
-
             <p style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 17px; color: #4a4a4a; margin-bottom: 32px;">
                 +7 (903) 275-03-99
             </p>
-
             <p class="farewell-text">
                 С нетерпением ждём встречи!
             </p>
@@ -741,7 +713,6 @@
     </section>
 
     <script>
-        // АНИМАЦИЯ ПОЯВЛЕНИЯ КОНТЕНТА ПРИ СКРОЛЛЕ
         function revealOnScroll() {
             var reveals = document.querySelectorAll(".reveal-content");
             for (var i = 0; i < reveals.length; i++) {
@@ -756,7 +727,6 @@
         window.addEventListener("scroll", revealOnScroll);
         window.addEventListener("load", revealOnScroll);
 
-        // Вкладки дресс-кода
         function openTab(evt, tabName) {
             var contents = document.getElementsByClassName("tabs-content");
             for (var i = 0; i < contents.length; i++) {
@@ -770,7 +740,6 @@
             evt.currentTarget.classList.add("active");
         }
 
-        // Музыка
         var playBtn = document.getElementById('playBtn');
         var audio = document.getElementById('music');
         var isPlaying = false;
@@ -790,7 +759,6 @@
             isPlaying = !isPlaying;
         });
 
-        // Таймер
         function startCountdown() {
             var daysEl = document.getElementById('days');
             var hoursEl = document.getElementById('hours');
@@ -829,7 +797,6 @@
         }
         startCountdown();
 
-        // Аллергия
         var allergyRadios = document.querySelectorAll('input[name="allergy"]');
         var allergyDetails = document.getElementById('allergyDetails');
 
@@ -844,7 +811,6 @@
             });
         }
 
-        // Отправка формы
         var rsvpForm = document.getElementById('rsvpForm');
         if (rsvpForm) {
             rsvpForm.addEventListener('submit', function(e) {
