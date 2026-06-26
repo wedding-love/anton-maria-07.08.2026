@@ -63,11 +63,12 @@
             width: 100%;
         }
 
+        /* ЦВЕТА: заменены только зелёный и лиловый */
         .section-yellow { background: #FFF1A0; color: #2d2d2d; }
         .section-orange { background: #FFC966; color: #2d2d2d; }
-        .section-green { background: #7BC67E; color: #2d2d2d; }
+        .section-green { background: #B5D6B0; color: #2d2d2d; } /* более нежный зелёный */
         .section-pink { background: #FFB3D9; color: #2d2d2d; }
-        .section-lilac { background: #D9B3D9; color: #2d2d2d; }
+        .section-lilac { background: #D4C5D9; color: #2d2d2d; } /* более нежный лиловый */
 
         .section-dresscode { 
             background: #ffffff; 
@@ -166,7 +167,7 @@
             margin: 26px 0 32px;
         }
 
-        /* КНОПКА МУЗЫКИ — ОРАНЖЕВАЯ */
+        /* КНОПКА МУЗЫКИ */
         .play-btn {
             background: #FFC966;
             border: none;
@@ -184,7 +185,7 @@
             white-space: nowrap;
         }
         .play-btn:hover { background: #f0b850; opacity: 0.9; }
-        .play-btn.playing { background: #7BC67E; color: #ffffff; }
+        .play-btn.playing { background: #B5D6B0; color: #ffffff; }
 
         .invitation-text {
             font-family: 'Cormorant Garamond', serif;
@@ -200,7 +201,7 @@
             font-weight: 300;
             font-size: 22px;
             line-height: 2;
-            color: #ffffff;
+            color: #2d2d2d;
             max-width: 360px;
             margin: 0 auto;
         }
@@ -341,7 +342,7 @@
         .location-name { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 26px; color: #2d2d2d; letter-spacing: 3px; margin-bottom: 6px; }
         .location-address { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; color: #4a4a4a; line-height: 1.7; margin-bottom: 26px; }
         
-        /* КНОПКА КАРТЫ — ОРАНЖЕВАЯ */
+        /* КНОПКА КАРТЫ */
         .map-btn { 
             display: inline-block; 
             text-decoration: none; 
@@ -509,7 +510,7 @@
 </head>
 <body>
 
-    <!-- ===== СЕКЦИЯ 1: ОБЛОЖКА (ВО ВСЮ ВЫСОТУ ЭКРАНА) ===== -->
+    <!-- ===== СЕКЦИЯ 1: ОБЛОЖКА ===== -->
     <section class="section-hero">
         <div class="reveal-content">
             <h1 class="hero-names">Антон<br>и Мария</h1>
@@ -534,8 +535,6 @@
                 Дорогие, любимые, самые родные!
                 <br><br>
                 Такой день невозможно представить без тех, кто был рядом все это время. Мы будем счастливы, если вы станете частью нашего самого важного дня.
-                <br><br>
-                Ваше присутствие — это самый тёплый подарок, который мы можем себе представить. Приходите, чтобы разделить с нами эту радость, смеяться, плакать от счастья и танцевать до утра.
                 <span class="invitation-highlight" style="color: #FFF1A0;">Мы ждём именно вас!</span>
             </p>
         </div>
@@ -591,7 +590,7 @@
     </section>
 
     <!-- ===== СЕКЦИЯ 5: ТАЙМИНГ ===== -->
-    <section class="section-green">
+    <section class="section-lilac">
         <div class="reveal-content">
             <h2 class="serif-title" style="color: #ffffff;">План дня</h2>
             <p class="serif-subtitle-white">timing</p>
@@ -674,9 +673,9 @@
             <div class="color-palette">
                 <div class="color-circle" style="background: #FFF1A0;" title="Жёлтый"></div>
                 <div class="color-circle" style="background: #FFB3D9;" title="Розовый"></div>
-                <div class="color-circle" style="background: #D9B3D9;" title="Лиловый"></div>
+                <div class="color-circle" style="background: #D4C5D9;" title="Лиловый"></div>
                 <div class="color-circle" style="background: #FFC966;" title="Оранжевый"></div>
-                <div class="color-circle" style="background: #7BC67E;" title="Зелёный"></div>
+                <div class="color-circle" style="background: #B5D6B0;" title="Зелёный"></div>
             </div>
 
             <div class="tabs-nav">
@@ -781,7 +780,7 @@
         </div>
     </section>
 
-    <!-- ===== СЕКЦИЯ 10: КОНТАКТЫ (СТОЛБИКОМ) ===== -->
+    <!-- ===== СЕКЦИЯ 10: КОНТАКТЫ ===== -->
     <section class="section-orange" style="padding-bottom: 90px;">
         <div class="reveal-content">
             <h2 class="serif-title" style="margin-bottom: 26px;">Связь с нами</h2>
@@ -790,7 +789,6 @@
                 По всем вопросам вы можете обратиться к нашему координатору
             </p>
 
-            <!-- КОНТАКТЫ СТОЛБИКОМ -->
             <div class="contacts-wrapper">
                 <a href="tel:+79032750399" class="contact-link">
                     <i class="fas fa-phone"></i> Светлана — +7 (903) 275-03-99
